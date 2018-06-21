@@ -47,6 +47,13 @@ if (session_id() == '') {
 	    	margin: 20px;
 	    }
 	</style>
+    <!-- Live Search Styles -->
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="css/fontello-ie7.css">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/ajaxlivesearch.min.css">
 </head>
 <body>
     <div class="wrapper">

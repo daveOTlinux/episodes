@@ -1,9 +1,9 @@
 c2e.convert_special: 0
 e2c.convert_num: 0
-openfiles: /home/dave/src/www/episodes/core/Config.php:1187:2878:1:
+openfiles: /home/dave/src/www/episodes/core/Config.php:3239:2292:0:
 openfiles: /home/dave/src/www/episodes/config.php:285:0:0:
 openfiles: /home/dave/src/www/episodes/core/AjaxProcessor.php:492:0:0:
-openfiles: /home/dave/src/www/episodes/index.php:447:5638:0:
+openfiles: /home/dave/src/www/episodes/index.php:6084:5469:1:
 snr_recursion_level: 5
 convertcolumn_horizontally: 0
 adv_open_matchname: 0
@@ -46,11 +46,12 @@ recent_files: file:///home/dave/src/www/phpTesting/read.php
 recent_files: file:///home/dave/src/www/phpTesting/config.php
 recent_files: file:///home/dave/src/www/phpTesting/index.php
 recent_files: file:///home/dave/src/www/episodes/core/Config.template.php
+recent_files: file:///home/dave/src/www/episodes/index.php
+recent_files: file:///home/dave/src/www/episodes/core/Config.php
 recent_files: file:///home/dave/src/www/episodes/config.php
 recent_files: file:///home/dave/src/www/episodes/core/AjaxProcessor.php
-recent_files: file:///home/dave/src/www/episodes/index.php
 snr_replacetype: 0
-savedir: file:///home/dave/src/www/episodes/core
+savedir: file:///home/dave/src/www/episodes
 last_filefilter: 
 htmlbar_notebooktab: 3
 view_blockstack: 1
