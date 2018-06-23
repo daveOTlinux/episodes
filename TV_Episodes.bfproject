@@ -1,9 +1,11 @@
 c2e.convert_special: 0
 e2c.convert_num: 0
-openfiles: /home/dave/src/www/episodes/core/Config.php:3239:2292:0:
+openfiles: /home/dave/src/www/episodes/core/Config.php:3945:1791:0:
 openfiles: /home/dave/src/www/episodes/config.php:285:0:0:
 openfiles: /home/dave/src/www/episodes/core/AjaxProcessor.php:492:0:0:
-openfiles: /home/dave/src/www/episodes/index.php:6084:5469:1:
+openfiles: /home/dave/src/www/episodes/js/ajaxlivesearch.js:15686:13936:0:
+openfiles: /home/dave/src/www/episodes/read.php:506:0:0:
+openfiles: /home/dave/src/www/episodes/index.php:505:0:1:
 snr_recursion_level: 5
 convertcolumn_horizontally: 0
 adv_open_matchname: 0
@@ -20,7 +22,7 @@ c2e.convert_iso: 0
 opendir: file:///home/dave/src/www/episodes
 wrap_text_default: 0
 default_mime_type: text/plain
-ssearch_text: Access
+ssearch_text: var wrapper
 snr_casesens: 0
 view_blocks: 1
 name: TV Episodes
@@ -46,10 +48,13 @@ recent_files: file:///home/dave/src/www/phpTesting/read.php
 recent_files: file:///home/dave/src/www/phpTesting/config.php
 recent_files: file:///home/dave/src/www/phpTesting/index.php
 recent_files: file:///home/dave/src/www/episodes/core/Config.template.php
-recent_files: file:///home/dave/src/www/episodes/index.php
 recent_files: file:///home/dave/src/www/episodes/core/Config.php
 recent_files: file:///home/dave/src/www/episodes/config.php
 recent_files: file:///home/dave/src/www/episodes/core/AjaxProcessor.php
+recent_files: file:///home/dave/src/www/episodes/js/ajaxlivesearch.js
+recent_files: file:///home/dave/src/www/episodes/search-form.php
+recent_files: file:///home/dave/src/www/episodes/read.php
+recent_files: file:///home/dave/src/www/episodes/index.php
 snr_replacetype: 0
 savedir: file:///home/dave/src/www/episodes
 last_filefilter: 
@@ -60,6 +65,8 @@ fb_viewmode: 0
 c2e.convert_symbol: 0
 ssearch_dotmatchall: 0
 searchlist: Access
+searchlist: form.subm
+searchlist: var wrapper
 autocomplete: 1
 outputb_show_all_output: 0
 bookmarks_show_mode: 0
@@ -75,6 +82,7 @@ recent_dirs: file:///home/dave/src/www/source
 recent_dirs: file:///home/dave/src/www/webDAV
 recent_dirs: file:///home/dave/src/www/phpTesting
 recent_dirs: file:///home/dave/src/www/episodes/core
+recent_dirs: file:///home/dave/src/www/episodes/js
 recent_dirs: file:///home/dave/src/www/episodes
 filegloblist: *.xml
 filegloblist: *.txt

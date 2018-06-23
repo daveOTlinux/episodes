@@ -1,4 +1,5 @@
 <?php
+
 // Check existence of id parameter before processing further
 if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
     // Include config file
@@ -52,7 +53,7 @@ if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
 ?>
 
 
-<!DOCTYPE html>
+<!DOCTYPE html>											
 <html lang="en">
 <head>
     <meta charset="UTF-8">
