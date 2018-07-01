@@ -77,12 +77,12 @@
 	                      echo "<table class='table table-bordered table-hover'>";
 	                          echo "<thead>";
 	                              echo "<tr>";
-	                                  echo "<th>ID</th>";
-	                                  echo "<th>Show Name</th>";
-	                                  echo "<th>Next Episode</th>";
-	                                  echo "<th>Season</th>";
-	                                  echo "<th>Show Source</th>";
-	                                  echo "<th>Action</th>";
+	                                  echo "<th style='width: 15%'>ID</th>";
+	                                  echo "<th style='width: 50%'>Show Name</th>";
+	                                  echo "<th style='width: 5%'>Next Episode</th>";
+	                                  echo "<th style='width: 5%'>Season</th>";
+	                                  echo "<th style='width: 20%'>Show Source</th>";
+	                                  echo "<th style='width: 15%'>Action</th>";
 	                              echo "</tr>";
 	                          echo "</thead>";
 	                          echo "<tbody>";
