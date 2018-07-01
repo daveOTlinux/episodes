@@ -22,16 +22,17 @@
         else {
 			echo "<ul class='shownames'>";            
             $statement->bind_result($ID, $ShowName);
-            while ($statement->fetch()) //outputs the records
-            {
- 				echo "<div id='item'>$ShowName</div>";                
-                //echo "<li>$ID $ShowName</li>";
-				//echo "<input id='item$ID' class='showitem' onClick='read.php($ID)' type='submit' value='" . $ID $ShowName . "'>";
-				//echo "<li onclick='getRecord(this.id)' id='$ID'>$ID $ShowName</li>";                
-				//echo "<li class='shownames' onclick='read.php?ID=" . $ID . "' id=item$ID>$ID $ShowName</li>";                
-				//echo "<li class='showitem' onclick='selectedItem('ID=1')' id=item$ID>$ID $ShowName</li>"
-                	//echo "<li onClick='selectCountry(" . $'ountry['ShowName'] . ")'>";
-            		//echo "</div>";
+            while ($statement->fetch()) {  //outputs the records
+	 				//echo "<div id='item$ID'>$ShowName</div>";                
+	            //echo "<li>$ID $ShowName</li>";
+					echo "<input id='item$ID' type='submit' value='" . $ShowName . "'>";
+					//echo "<input id='item$ID' class='showitem' onClick='read.php($ID)' type='submit' value='" . $ID $ShowName . "'>";
+								
+					//echo "<li onclick='getRecord(this.id)' id='$ID'>$ID $ShowName</li>";                
+					//echo "<li class='shownames' onclick='read.php?ID=" . $ID . "' id=item$ID>$ID $ShowName</li>";                
+					//echo "<li class='showitem' onclick='selectedItem('ID=1')' id=item$ID>$ID $ShowName</li>"
+	              	//echo "<li onClick='selectCountry(" . $'ountry['ShowName'] . ")'>";
+	            		//echo "</div>";
             }
 			echo '</ul>';            
             $statement->close();
