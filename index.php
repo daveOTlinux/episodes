@@ -29,28 +29,11 @@
 	 });
     
 </script>    
-    <style type="text/css">
-        .wrapper{
-            width: 650px;
-            margin: 0 auto;
-        }
-        .page-header h2{
-            margin-top: 0;
-        }
-        table tr td:last-child a{
-            margin-right: 15px;
-        }
-    </style>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();   
-        });
-    </script>    
-    <style type="text/css">
-		.sortbyfield{
-	    	margin: 20px;
-	    }
-	</style>
+ <script type="text/javascript">
+     $(document).ready(function(){
+         $('[data-toggle="tooltip"]').tooltip();   
+     });
+ </script>    
 </head>
 <body>
     <div class="wrapper">
