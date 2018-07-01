@@ -25,7 +25,7 @@
             while ($statement->fetch()) {  //outputs the records
 	 				//echo "<div id='item$ID'>$ShowName</div>";                
 	            //echo "<li>$ID $ShowName</li>";
-					echo "<input id='item$ID' type='submit' value='" . $ShowName . "'>";
+					echo "<input id='item$ID' onClick='read.php?ID=$ID' type='submit' value='" . $ShowName . "'>";
 					//echo "<input id='item$ID' class='showitem' onClick='read.php($ID)' type='submit' value='" . $ID $ShowName . "'>";
 								
 					//echo "<li onclick='getRecord(this.id)' id='$ID'>$ID $ShowName</li>";                
