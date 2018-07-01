@@ -21,6 +21,9 @@
 table tr td:last-child a{
 	margin-right: 15px;
 }
+.sortbyfield{
+	margin: 20px;
+}
 #content {
     height: inherit;
     background: #ebebeb;
