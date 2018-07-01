@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
+    <script src="jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+<link href="style.css" rel="stylesheet">
+<script>
+	 $(document).ready(function () {
+	     $("#searchbox").on('keyup',function () {
+	         var key = $(this).val();
+	
+	         $.ajax({
+	             url:'fetch.php',
+	             type:'POST',
+	             data:'keyword='+key,
+	             beforeSend:function () {
+	                 $("#results").slideUp('fast');
+	             },
+	             success:function (data) {
+	                 $("#results").html(data);
+	                 $("#results").slideDown('fast');
+	             }
+	         });
+	     });
+	 });
+    
+</script>    
     <style type="text/css">
         .wrapper{
             width: 650px;
@@ -47,7 +70,12 @@
 					        </ul>
 					    </div>
 					</div>
-  
+					<div id="content">
+						<input type="search" name="keyword" placeholder="Search Names" id="searchbox">
+						<div id="results">
+							<!--<a href="post-location">Fetched Item</a>-->
+						</div>
+					</div>
 	              <?php
 						
 	              //Setup field to sort database or use default field
