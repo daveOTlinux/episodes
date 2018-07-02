@@ -14,10 +14,13 @@
 .sortbyfield{
 	margin: 20px;
 }
+#dropdown {
+	width: 40%;
+}
 #content {
     height: auto;
     background: #ebebeb;
-    width: 50%;
+    width: 40%;
     padding:5px;
     box-sizing: border-box;
 }
