@@ -68,12 +68,12 @@
     <div class="wrapper">
         <div class="container-fluid">
 			<div class="row" style="height: 75px;">
-				<div class="pt-1 col-sm-6">
+				<div class="pt-2 col-sm-6">
 					<div class="page-header clearfix">
 						<h2 class="pull-left">Show Episodes</h2>
 					</div>
 				</div>
-				<div class="pt-1 col-sm-6">  		
+				<div class="pt-2 col-sm-6">  		
 					<a href="create.php" class="btn btn-success pull-right">Add New Show</a>
 				</div>
 			</div>

@@ -23,18 +23,11 @@
 			echo "<ul class='shownames'>";            
             $statement->bind_result($ID, $ShowName);
             while ($statement->fetch()) {  //outputs the records
-	 				//echo "<div id='item$ID'>$ShowName</div>";                
-	            //echo "<li>$ID $ShowName</li>";
-	            
+
 					//echo "<input id='item$ID' onclick='location.href=`read.php?ID=$ID`' type='button' value='" . $ShowName . "'>";
-					echo "<li id='item$ID' onclick='location.href=`read.php?ID=$ID`'> $ShowName </li>";
-					//echo "<input id='item$ID' class='showitem' onClick='read.php($ID)' type='submit' value='" . $ID $ShowName . "'>";
-								
-					//echo "<li onclick='getRecord(this.id)' id='$ID'>$ID $ShowName</li>";                
-					//echo "<li class='shownames' onclick='read.php?ID=" . $ID . "' id=item$ID>$ID $ShowName</li>";                
-					//echo "<li class='showitem' onclick='selectedItem('ID=1')' id=item$ID>$ID $ShowName</li>"
-	              	//echo "<li onClick='selectCountry(" . $'ountry['ShowName'] . ")'>";
-	            		//echo "</div>";
+					//echo "<li id='item$ID' onclick='location.href=`read.php?ID=$ID`'> $ShowName </li>";
+					echo "<div class='showitem' id='item$ID' onclick='location.href=`read.php?ID=$ID`'> $ShowName </div>";
+					
             }
 			echo '</ul>';            
             $statement->close();
