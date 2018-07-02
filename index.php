@@ -28,7 +28,19 @@
 	     });
 	 });
     
-</script>    
+</script>
+    <style type="text/css">
+        .wrapper{
+            width: 650px;
+            margin: 0 auto;
+        }
+        .page-header h2{
+            margin-top: 0;
+        }
+        table tr td:last-child a{
+            margin-right: 15px;
+        }
+    </style>    
  <script type="text/javascript">
      $(document).ready(function(){
          $('[data-toggle="tooltip"]').tooltip();   
@@ -77,12 +89,12 @@
 	                      echo "<table class='table table-bordered table-hover'>";
 	                          echo "<thead>";
 	                              echo "<tr>";
-	                                  echo "<th style='width: 15%'>ID</th>";
-	                                  echo "<th style='width: 50%'>Show Name</th>";
+	                                  echo "<th style='width: 10%'>ID</th>";
+	                                  echo "<th style='width: 40%'>Show Name</th>";
 	                                  echo "<th style='width: 5%'>Next Episode</th>";
 	                                  echo "<th style='width: 5%'>Season</th>";
 	                                  echo "<th style='width: 20%'>Show Source</th>";
-	                                  echo "<th style='width: 15%'>Action</th>";
+	                                  echo "<th style='width: 20%'>Action</th>";
 	                              echo "</tr>";
 	                          echo "</thead>";
 	                          echo "<tbody>";
