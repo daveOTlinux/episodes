@@ -51,12 +51,13 @@
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+               <div class="col-md-12">
                     <div class="page-header clearfix">
                         <h2 class="pull-left">Show Episodes</h2>
                         <a href="create.php" class="btn btn-success pull-right">Add New Show</a>
                     </div>
-					<div class="sortbyfield">
+               </div>
+					<div class="col-md-4">
 					   <div class="dropdown">
 					        <a data-target="#" href="index.php" data-toggle="dropdown" class="dropdown-toggle">Sort By <b class="caret"></b></a>
 					        <ul class="dropdown-menu">
@@ -65,7 +66,7 @@
 					        </ul>
 					    </div>
 					</div>
-					<div id="content">
+					<div class="col-md-4" id="content">
 						<input type="search" name="keyword" placeholder="Search Names" id="searchbox">
 						<div id="results">
 							<!--<a href="post-location">Fetched Item</a>-->
