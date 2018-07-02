@@ -61,3 +61,7 @@
     background: white;
     border-bottom:1px solid #bdbdbd;
 }
+.showitem:hover {
+	color: white;
+	background: green;
+}
