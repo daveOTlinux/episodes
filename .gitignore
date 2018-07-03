@@ -1,0 +1,6 @@
+# Editor last save hidden file
+*.php~
+
+#Bluefish project file
+*.bfproject
+
