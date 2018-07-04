@@ -1,5 +1,8 @@
 # Editor last save hidden file
 *.php~
+*.css~
+*.html~
+*.js~
 
 #Bluefish project file
 *.bfproject

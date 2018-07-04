@@ -11,6 +11,10 @@
 #header h1 {
     color:#222222;
 }
+.wrapper{
+	width: 500px;
+	margin: 0 auto;
+}
 .sortbyfield{
 	margin: 20px;
 }

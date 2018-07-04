@@ -4,7 +4,6 @@
 	<title>Episodes Dashboard</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--	<script src="jquery.js"></script> -->
 	<script
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -58,11 +57,11 @@
             margin-right: 15px;
         }
     </style>    
- <script type="text/javascript">
-     $(document).ready(function(){
-         $('[data-toggle="tooltip"]').tooltip();   
-     });
- </script>    
+	 <script type="text/javascript">
+	     $(document).ready(function(){
+	         $('[data-toggle="tooltip"]').tooltip();   
+	     });
+	 </script>    
 </head>
 <body>
     <div class="wrapper">
