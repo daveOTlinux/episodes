@@ -25,6 +25,7 @@ if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
                 $row = $result->fetch_array(MYSQLI_ASSOC);
                 
                 // Retrieve individual field value
+                $ID = $row["ID"];
                 $ShowName = $row["ShowName"];
                 $NextEpisode = $row["NextEpisode"];
                 $Season = $row["Season"];
@@ -96,14 +97,14 @@ if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
 					</div>
 					<div class="pt-2 col-sm-4">
 						<?php  		
-							echo "<a href='update.php?ID=". $row["ID"] . "' class='btn btn-success pull-right'>Edit Show</a>";
+							echo "<a href='update.php?ID=". $ID . "' class='btn btn-success pull-right'>Edit Show</a>";
 						?>
 					</div>
 				</div>
 				<div class="row">	
 	            <div class="form-group">
 		            <label>Show Name</label>
-		            <p class="form-control-static"><?php echo $row["ShowName"]; ?></p>
+		            <p class="form-control-static"><?php echo $ShowName; ?></p>
 	            </div>
 				</div>
 				<div class="row">
@@ -111,17 +112,22 @@ if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
 						<label>Next Episode</label>
 					</div>
 					<div class="col-sm-1">
-						<p class="form-control-static"><?php echo $row["NextEpisode"]; ?></p>
+						<label>E</label>
+					</div>			
+					<div class="col-sm-1">
+						<p class="form-control-static"><?php echo ltrim($NextEpisode, "E"); ?></p>
 					</div>
 					<div class="col-sm-1">
 						<i class="fa fa-arrow-up" aria-hidden="true"></i>
 					</div>
-					<div class="col-sm-2"></div>								
 					<div class="col-sm-3">
-							<label>Season</label>
+						<label>Season</label>
 					</div>
 					<div class="col-sm-1">
-						<p class="form-control-static"><?php echo $row["Season"]; ?></p>
+						<label>S</label>					
+					</div>								
+					<div class="col-sm-1">
+						<p class="form-control-static"><?php echo ltrim($Season, "S"); ?></p>
 					</div>
 					<div class="col-sm-1">
 						<i class="fa fa-arrow-up" aria-hidden="true"></i>
@@ -130,7 +136,7 @@ if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
 				<div class="row">
 					<div class="form-group">
 						<label>Show Source</label>
-						<p class="form-control-static"><?php echo $row["ShowSource"]; ?></p>
+						<p class="form-control-static"><?php echo $ShowSource; ?></p>
 					</div>
 				</div>
 				<div class="row">                    
