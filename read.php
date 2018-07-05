@@ -108,30 +108,23 @@ if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
 	            </div>
 				</div>
 				<div class="row">
-					<div class="col-sm-3">
-						<label>Next Episode</label>
+					<div class="text-right pr-0 col-sm-3">Next Episode</div>
+					<div class="text-right pr-0 col-sm-1" >E</div>	
+					<div class="pl-0 text-left col-sm-1">
+						<p><?php echo ltrim($NextEpisode, "E"); ?></p>
 					</div>
-					<div class="col-sm-1">
-						<label>E</label>
-					</div>			
-					<div class="col-sm-1">
-						<p class="form-control-static"><?php echo ltrim($NextEpisode, "E"); ?></p>
+					<div class="pl-0 col-sm-1">
+						<i class="fa fa-arrow-up"></i>
 					</div>
-					<div class="col-sm-1">
-						<i class="fa fa-arrow-up" aria-hidden="true"></i>
-					</div>
-					<div class="col-sm-3">
-						<label>Season</label>
-					</div>
-					<div class="col-sm-1">
-						<label>S</label>					
-					</div>								
-					<div class="col-sm-1">
-						<p class="form-control-static"><?php echo ltrim($Season, "S"); ?></p>
+					<div class="text-right pr-0 col-sm-2">Season</div>
+					<div class="text-right pr-0 col-sm-1" >S</div>						
+					<div class="pl-0 text-left col-sm-1">
+						<p><?php echo ltrim($Season, "S"); ?></p>
 					</div>
 					<div class="col-sm-1">
 						<i class="fa fa-arrow-up" aria-hidden="true"></i>
 					</div>
+					<div class="col-sm-1" ></div>
 				</div>
 				<div class="row">
 					<div class="form-group">
