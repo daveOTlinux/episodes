@@ -114,7 +114,7 @@ if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
 						<p><?php echo ltrim($NextEpisode, "E"); ?></p>
 					</div>
 					<div class="col-sm-1">
-						<a title='Increment Episode' data-toggle='tooltip' class='fa fa-arrow-up'></a>
+						<?php echo "<a href='nextEpisode.php?ID=". $ID. "' title='Increment Episode' data-toggle='tooltip' class='fa fa-arrow-up'></a>"; ?>
 					</div>
 					<div class="text-right pr-0 col-sm-2">Season</div>
 					<div class="text-right pr-0 col-sm-1" >S</div>						
