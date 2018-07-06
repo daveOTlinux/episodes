@@ -25,7 +25,7 @@
 		             
 		             // Retrieve individual field value
 		             $ID = $row["ID"];
-		             $currentEpisode = $row["NextEpisode"];
+		             $currentSeason = $row["Season"];
 		             
 		         } else{
 		             // URL doesn't contain valid id parameter. Redirect to error page
@@ -41,22 +41,22 @@
 		}
     
 		//Do the math to generate the next Episode number
-		$temp = 1 + intval(ltrim($currentEpisode, "E"));
+		$temp = 1 + intval(ltrim($currentSeason, "S"));
 		if($temp<10){
-			$NextEpisode = "E0" . strval($temp);		
+			$NextSeason = "S0" . strval($temp);		
 		} else{
-			$NextEpisode = "E" . strval($temp);				
+			$NextSeason = "S" . strval($temp);				
 		}
 
 		// Prepare an update statement to increment to next Episode
-		$sql = "UPDATE tvEpisodes SET NextEpisode=? WHERE ID=?";
+		$sql = "UPDATE tvEpisodes SET Season=? WHERE ID=?";
 	    
 		if($stmt = $mysqli->prepare($sql)){
 			// Bind variables to the prepared statement as parameter
-			$stmt->bind_param("si", $param_NextEpisode, $param_ID);
+			$stmt->bind_param("si", $param_NextSeason, $param_ID);
 			  
 			// Set parameters
-			$param_NextEpisode = $NextEpisode;        
+			$param_NextSeason = $NextSeason;        
 			$param_ID = $ID;
 			  
 				// Attempt to execute the prepared statement

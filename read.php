@@ -122,7 +122,7 @@ if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
 						<p><?php echo ltrim($Season, "S"); ?></p>
 					</div>
 					<div class="col-sm-1">
-						<a title='Increment Season' data-toggle='tooltip' class='fa fa-arrow-up'></a>
+						<?php echo "<a href='nextSeason.php?ID=". $ID. "' title='Increment Season' data-toggle='tooltip' class='fa fa-arrow-up'></a>"; ?>
 					</div>
 					<div class="col-sm-1" ></div>
 				</div>
