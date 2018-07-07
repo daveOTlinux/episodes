@@ -125,7 +125,10 @@
                               echo "<tr>";
                                   echo "<td>" . $row['ID'] . "</td>";
                                   echo "<td>" . $row['ShowName'] . "</td>";
-                                  echo "<td>" . $row['NextEpisode'] . "</td>";
+                                  echo "<td>" . $row['NextEpisode'];
+                                  	echo "<a href='nextEpisode.php?ID=". $row['ID'] ."' title='Increment Episode' data-toggle='tooltip'>";
+                                  	echo "<span  class='fa fa-arrow-up'></span></a>";
+											echo "</td>";
                                   echo "<td>" . $row['Season'] . "</td>";
                                   echo "<td>" . $row['ShowSource'] . "</td>";
                                   echo "<td>";
