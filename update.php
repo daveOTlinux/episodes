@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once 'config.php';
+require 'config.php';
    
 // Define variables and initialize with empty values
 $ShowName = $NextEpisode = $Season = $ShowSource = "";
@@ -21,21 +21,30 @@ if(isset($_POST["ID"]) && !empty($_POST["ID"])){
         $ShowName = $input_ShowName;
     }
     
-    // Validate NextEpisode
-    $input_NextEpisode = trim($_POST["NextEpisode"]);
-    if(empty($input_NextEpisode)){
-        $NextEpisode_err = 'Please enter an Next Episode.';     
-    } else{
-        $NextEpisode = $input_NextEpisode;
-    }
+	// Validate NextEpisode
+	$input_NextEpisode = trim($_POST["NextEpisode"]);
+	if(empty($input_NextEpisode)){
+	    $NextEpisode_err = 'Please enter an Next Episode.';     
+	} else{
+		$temp = intval(ltrim($input_NextEpisode, "a..zA..Z"));
+		if($temp < 10) {
+			$NextEpisode = "E0" . strval($temp);
+		} else {
+			$NextEpisode = "E" . strval($temp);			
+		}
+	}
     
     // Validate Season
     $input_Season = trim($_POST["Season"]);
     if(empty($input_Season)){
         $Season_err = "Please enter the Season.";     
     } else{
-        $Season = $input_Season;
-    }
+		$temp = intval(ltrim($input_Season, "a..zA..Z"));
+		if($temp < 10) {
+			$Season = "S0" . strval($temp);
+		} else {
+			$Season = "S" . strval($temp);			
+		}    }
 
     // Validate ShowSource
     $input_ShowSource = trim($_POST["ShowSource"]);
@@ -134,18 +143,36 @@ if(isset($_POST["ID"]) && !empty($_POST["ID"])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Update Record</title>
+	<title>View Record</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
 	<link
 		rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 		crossorigin="anonymous">
-    <style type="text/css">
-        .wrapper{
-            wIDth: 500px;
-            margin: 0 auto;
-        }
-    </style>
+  	<script
+  		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+		integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+		crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="style.css" rel="stylesheet">
+
+	<style type="text/css">
+	    .wrapper{
+	        width: 600px;
+	        margin: 0 auto;
+	    }
+	</style>
+	
 </head>
 <body>
     <div class="wrapper">
@@ -163,14 +190,22 @@ if(isset($_POST["ID"]) && !empty($_POST["ID"])){
                             <input type="text" name="ShowName" class="form-control" value="<?php echo $ShowName; ?>">
                             <span class="help-block"><?php echo $ShowName_err;?></span>
                         </div>
-                        <div class="form-group <?php echo (!empty($NextEpisode_err)) ? 'has-error' : ''; ?>">
-                            <label>NextEpisode</label>
-                            <textarea name="NextEpisode" class="form-control"><?php echo $NextEpisode; ?></textarea>
-                            <span class="help-block"><?php echo $NextEpisode_err;?></span>
-                        </div>
+	                     <div class="form-group <?php echo (!empty($NextEpisode_err)) ? 'has-error' : ''; ?>">
+                           <label>NextEpisode</label>
+									<div class="row align-items-center">
+										<span class="text-right pr-0 col-sm-1">E</span>                        
+                            	<input type="text" name="NextEpisode" class="text-left col-sm-1 form-control" value="<?php echo ltrim($NextEpisode, "Ee"); ?>">
+										<span class="col-sm-10"> </span>                        
+									</div>
+                           <span class="help-block"><?php echo $NextEpisode_err;?></span>
+								</div>
                         <div class="form-group <?php echo (!empty($Season_err)) ? 'has-error' : ''; ?>">
-                            <label>Season</label>
-                            <input type="text" name="Season" class="form-control" value="<?php echo $Season; ?>">
+									<label>Season</label>
+									<div class="row align-items-center">
+										<span class="text-right pr-0 col-sm-1">S</span>                        
+                            	<input type="text" name="Season" class="text-left col-sm-1 form-control" value="<?php echo ltrim($Season, "Ss"); ?>">
+										<span class="col-sm-10"> </span>                        
+									</div>
                             <span class="help-block"><?php echo $Season_err;?></span>
                         </div>
                         <div class="form-group <?php echo (!empty($ShowSource_err)) ? 'has-error' : ''; ?>">

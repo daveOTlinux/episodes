@@ -41,7 +41,7 @@
 		}
     
 		//Do the math to generate the next Episode number
-		$temp = 1 + intval(ltrim($currentSeason, "S"));
+		$temp = 1 + intval(ltrim($currentSeason, "a..zA..Z"));
 		if($temp<10){
 			$NextSeason = "S0" . strval($temp);		
 		} else{

@@ -2,7 +2,7 @@
 // Process delete operation after confirmation
 if(isset($_POST["ID"]) && !empty($_POST["ID"])){
     // Include config file
-    require_once 'config.php';
+    require 'config.php';
     
     // Prepare a select statement
     $sql = "DELETE FROM tvEpisodes WHERE ID = ?";

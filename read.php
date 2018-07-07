@@ -80,11 +80,6 @@ if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
 
 	<link href="style.css" rel="stylesheet">
 	
-<!--        .wrapper{
-            width: 500px;
-            margin: 0 auto;
-        }
-    </style> -->
 </head>
 <body>
     <div class="wrapper">
@@ -111,7 +106,7 @@ if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
 					<div class="text-right pr-0 col-sm-3">Next Episode</div>
 					<div class="text-right pr-0 col-sm-1" >E</div>	
 					<div class="pl-0 text-left col-sm-1">
-						<p><?php echo ltrim($NextEpisode, "E"); ?></p>
+						<p><?php echo ltrim($NextEpisode, "a..zA..Z"); ?></p>
 					</div>
 					<div class="col-sm-1">
 						<?php echo "<a href='nextEpisode.php?ID=". $ID. "' title='Increment Episode' data-toggle='tooltip' class='fa fa-arrow-up'></a>"; ?>
@@ -119,7 +114,7 @@ if(isset($_GET["ID"]) && !empty(trim($_GET["ID"]))){
 					<div class="text-right pr-0 col-sm-2">Season</div>
 					<div class="text-right pr-0 col-sm-1" >S</div>						
 					<div class="pl-0 text-left col-sm-1">
-						<p><?php echo ltrim($Season, "S"); ?></p>
+						<p><?php echo ltrim($Season, "a..zA..Z"); ?></p>
 					</div>
 					<div class="col-sm-1">
 						<?php echo "<a href='nextSeason.php?ID=". $ID. "' title='Increment Season' data-toggle='tooltip' class='fa fa-arrow-up'></a>"; ?>

@@ -41,7 +41,7 @@
 		}
     
 		//Do the math to generate the next Episode number
-		$temp = 1 + intval(ltrim($currentEpisode, "E"));
+		$temp = 1 + intval(ltrim($currentEpisode, "a..zA..Z"));
 		if($temp<10){
 			$NextEpisode = "E0" . strval($temp);		
 		} else{
