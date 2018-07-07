@@ -55,6 +55,7 @@
         }
         table tr td:last-child a{
             margin-right: 15px;
+            white-space: pre;
         }
     </style>    
 	 <script type="text/javascript">
@@ -125,9 +126,10 @@
                               echo "<tr>";
                                   echo "<td>" . $row['ID'] . "</td>";
                                   echo "<td>" . $row['ShowName'] . "</td>";
-                                  echo "<td>" . $row['NextEpisode'];
+                                  echo "<td>";
+                                  	echo "<span>" . $row['NextEpisode'] . "  " . "</span>";
                                   	echo "<a href='nextEpisode.php?ID=". $row['ID'] ."' title='Increment Episode' data-toggle='tooltip'>";
-                                  	echo "<span  class='fa fa-arrow-up'></span></a>";
+                                  	echo "<span class='fa fa-arrow-up'></span></a>";
 											echo "</td>";
                                   echo "<td>" . $row['Season'] . "</td>";
                                   echo "<td>" . $row['ShowSource'] . "</td>";
