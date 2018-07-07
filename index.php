@@ -4,7 +4,6 @@
 	<title>Episodes Dashboard</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--	<script src="jquery.js"></script> -->
 	<script
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -56,13 +55,14 @@
         }
         table tr td:last-child a{
             margin-right: 15px;
+            white-space: pre;
         }
     </style>    
- <script type="text/javascript">
-     $(document).ready(function(){
-         $('[data-toggle="tooltip"]').tooltip();   
-     });
- </script>    
+	 <script type="text/javascript">
+	     $(document).ready(function(){
+	         $('[data-toggle="tooltip"]').tooltip();   
+	     });
+	 </script>    
 </head>
 <body>
     <div class="wrapper">
@@ -124,17 +124,25 @@
                           echo "<tbody>";
                           while($row = $result->fetch_array()){
                               echo "<tr>";
-                                  echo "<td>" . $row['ID'] . "</td>";
-                                  echo "<td>" . $row['ShowName'] . "</td>";
-                                  echo "<td>" . $row['NextEpisode'] . "</td>";
-                                  echo "<td>" . $row['Season'] . "</td>";
-                                  echo "<td>" . $row['ShowSource'] . "</td>";
-                                  echo "<td>";
-                                      echo "<a href='read.php?ID=". $row['ID'] ."' title='View Record' data-toggle='tooltip'><span class='fa fa-eye'></span></a>";
-                                      echo "<a href='update.php?ID=". $row['ID'] ."' title='Update Record' data-toggle='tooltip'><span class='fa fa-pencil'></span></a>";
-                                      echo "<a href='delete.php?ID=". $row['ID'] ."' title='Delete Record' data-toggle='tooltip'><span class='fa fa-trash'></span></a>";
-                                  echo "</td>";
-                              echo "</tr>";
+											echo "<td>" . $row['ID'] . "</td>";
+											echo "<td>" . $row['ShowName'] . "</td>";
+											echo "<td>";
+												echo "<span>" . $row['NextEpisode'] . "  " . "</span>";
+												echo "<a href='nextEpisode.php?ID=". $row['ID'] ."' title='Increment Episode' data-toggle='tooltip'>";
+												echo "<span class='fa fa-arrow-up'></span></a>";
+											echo "</td>";
+											echo "<td>";
+												echo "<span>" . $row['Season'] . "  " . "</span>";
+												echo "<a href='nextSeason.php?ID=". $row['ID'] ."' title='Increment Season' data-toggle='tooltip'>";
+												echo "<span class='fa fa-arrow-up'></span></a>";
+											echo "</td>";
+                                 echo "<td>" . $row['ShowSource'] . "</td>";
+                                 echo "<td>";
+                                     echo "<a href='read.php?ID=". $row['ID'] ."' title='View Record' data-toggle='tooltip'><span class='fa fa-eye'></span></a>";
+                                     echo "<a href='update.php?ID=". $row['ID'] ."' title='Update Record' data-toggle='tooltip'><span class='fa fa-pencil'></span></a>";
+                                     echo "<a href='delete.php?ID=". $row['ID'] ."' title='Delete Record' data-toggle='tooltip'><span class='fa fa-trash'></span></a>";
+                                 echo "</td>";
+                             echo "</tr>";
                           }
                           echo "</tbody>";                            
                       echo "</table>";
